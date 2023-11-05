@@ -52,9 +52,32 @@ public class BankAccount {
         if(amount <= balance) {
             balance -= amount;
         } else {
-            throw new RuntimeException("Insufficient Balance");
+            throw new IllegalArgumentException("Insufficient Balance");
         }
 
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
+
+    public double getMinBalance() {
+        return minBalance;
+    }
+
+    public void setMinBalance(double minBalance) {
+        this.minBalance = minBalance;
+    }
 }
